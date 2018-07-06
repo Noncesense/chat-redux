@@ -10,7 +10,7 @@ handleClick = (channel) => {
 
 render() {
   return (
-    <div>
+    <div className="col-sm-4 col-xs-4">
       {this.props.channels.map((channel) => <Channel key={channel} channel={channel} />)}
     </div>
     )

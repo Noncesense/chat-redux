@@ -4,7 +4,7 @@ import MessageList from '../containers/MessageList.jsx';
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="row">
       <ChannelList />
       <MessageList />
     </div>
