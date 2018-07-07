@@ -18,7 +18,7 @@ class MessageList extends Component {
           <h2>{channelTitle}</h2>
         </div>
         <div>
-          {this.props.messages.map((message) => <Message key={message.content} message={message}/>)}
+          {this.props.messages.map((message) => <Message key={message.id} message={message}/>)}
         </div>
         <MessageForm />
       </div>
