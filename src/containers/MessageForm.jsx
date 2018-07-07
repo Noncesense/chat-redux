@@ -20,8 +20,11 @@ class MessageForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.props.selectedChannel, this.props.currentUser, this.state.input);
-    this.props.addMessage(this.props.selectedChannel, this.props.currentUser, this.state.input)
+    this.props.addMessage(this.props.selectedChannel, this.props.currentUser, this.state.input);
+    this.setState({
+      input: ""
+    })
+    console.log(this.state.input)
   }
 
   render() {
@@ -29,7 +32,7 @@ class MessageForm extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" value={this.state.input} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
         </form>
